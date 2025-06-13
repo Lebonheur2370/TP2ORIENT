@@ -1,49 +1,45 @@
 /* Animation du slider d'arrière-plan */
 .hero-slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    animation: slideShow 16s infinite;
-  }
-  
-  .slide-1 {
-    background-image: url('public/images/assets/iai.jpg');
-    animation-delay: 0s;
-  }
-  .slide-2 {
-    background-image: url('public/images/assets/uob.jpg');
-    animation-delay: 4s;
-  }
-  .slide-3 {
-    background-image: url('public/images/assets/ustm.jpg');
-    animation-delay: 8s;
-  }
-  .slide-4 {
-    background-image: url('public/images/assets/ung.jpg');
-    animation-delay: 12s;
-  }
-  
-  @keyframes slideShow {
-    0%, 20% {
-      opacity: 1;
-    }
-    25%, 100% {
-      opacity: 0;
-    }
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: slideShow 16s infinite;
+}
+
+.slide-1 {
+  background-image: url('../public/images/assets/iai.jpg');
+  animation-delay: 0s;
+}
+.slide-2 {
+  background-image: url('../public/images/assets/uob.jpg');
+  animation-delay: 4s;
+}
+.slide-3 {
+  background-image: url('../public/images/assets/ustm.jpg');
+  animation-delay: 8s;
+}
+.slide-4 {
+  background-image: url('../public/images/assets/ung.jpg');
+  animation-delay: 12s;
+}
+
+@keyframes slideShow {
+  0%, 20% { opacity: 1; }
+  25%, 100% { opacity: 0; }
+}
   
   /* Animation du texte défilant */
   .marquee-container {

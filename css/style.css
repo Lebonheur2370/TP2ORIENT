@@ -27,7 +27,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
+  padding: 1rem 5%;
   background: var(--gradient-blue);
   color: var(--white);
   position: fixed;
@@ -39,8 +39,8 @@ body {
 
 .logo {
   font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
 }
 
 .nav-links {

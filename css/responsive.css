@@ -1,0 +1,146 @@
+@media (max-width: 768px) {
+    .hero-content {
+      padding: 0 1rem;
+    }
+    
+    .marquee-text {
+      font-size: 1.8rem;
+      animation-duration: 12s;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .marquee-text {
+      font-size: 1.5rem;
+      animation-duration: 10s;
+    }
+  }
+
+/* Tablettes */
+@media (max-width: 992px) {
+    .navbar {
+      padding: 1rem 5%;
+      flex-wrap: wrap;
+    }
+    
+    .menu-icon {
+      display: block;
+      order: 1;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: var(--gradient-blue);
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      transform: translateY(-150%);
+      z-index: 999;
+    }
+    
+    #menu-toggle:checked ~ .nav-links {
+      transform: translateY(0);
+    }
+    
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+    
+    section {
+      padding: 4rem 5%;
+    }
+    
+    .universites-container,
+    .team-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Mobiles */
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 0 1rem;
+    }
+    
+    .marquee-text {
+      font-size: 1.8rem;
+      animation-duration: 12s;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    
+    .apropos-text {
+      font-size: 1rem;
+    }
+    
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .footer-section h3::after,
+    .footer-section h4::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .footer-social {
+      justify-content: center;
+    }
+  }
+  
+  /* Petits mobiles */
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.5rem;
+    }
+    
+    .marquee-text {
+      font-size: 1.5rem;
+      animation-duration: 10s;
+    }
+    
+    .btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 0.9rem;
+    }
+    
+    section {
+      padding: 3rem 1rem;
+    }
+    
+    .universites-container,
+    .team-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+      padding: 1.5rem;
+    }
+    
+    .card-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+    }
+  }

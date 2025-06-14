@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-  --primary-color: #1a73e8;
-  --secondary-color: #4285f4;
+  --primary-color: #2a2d30;
+  --secondary-color: #141414;
   --accent-color: #34a853;
-  --dark-blue: #0d47a1;
+  --dark-blue: #252627;
   --light-blue: #e8f0fe;
-  --text-dark: #202124;
+  --text-dark: #171718;
   --text-light: #5f6368;
   --white: #ffffff;
   --gradient-blue: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -308,7 +308,7 @@ section {
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%;
+  width: 95%;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -317,7 +317,7 @@ section {
 }
 
 .form-group textarea {
-  min-height: 150px;
+  min-height: 10px;
   resize: vertical;
 }
 
@@ -506,4 +506,116 @@ section {
 
 .universite-card:hover .card-image img {
   transform: scale(1.1);
+}
+
+
+/* Conteneur principal */
+.universites {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Masquer la scrollbar */
+.universites-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.universites-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Animation de défilement */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-300px * 12 - 2rem * 11)); } /* 12 cartes × largeur + gaps */
+}
+
+/* Conteneur des cartes avec animation */
+.universites-container {
+  display: flex;
+  width: max-content; /* Empêche le retour à la ligne */
+  animation: scroll 60s linear infinite;
+}
+
+/* Pause au survol */
+.universites-container:hover {
+  animation-play-state: paused;
+}
+
+/* Style des cartes */
+.universite-card {
+  flex: 0 0 300px; /* Largeur fixe */
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Contenu des cartes */
+.card-image {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Effets interactifs */
+.universite-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.universite-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/* Bouton */
+.btn-en-savoir-plus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2a2d30;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: gap 0.3s ease;
+}
+
+.universite-card:hover .btn-en-savoir-plus {
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .universite-card {
+    flex: 0 0 280px; /* Réduire légèrement sur mobile */
+  }
+  
+  .card-image {
+    height: 180px;
+  }
 }

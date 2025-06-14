@@ -1,0 +1,53 @@
+/* Hero animations */
+.hero-content {
+transform: translateY(20px);
+opacity: 0;
+animation: fadeInUp 1s forwards 0.5s;
+}
+
+/* Filières Cards animations */
+.filiere-card {
+transform: translateY(50px);
+opacity: 0;
+}
+
+.filiere-card:nth-child(1) { animation: fadeInUp 0.8s forwards 0.3s; }
+.filiere-card:nth-child(2) { animation: fadeInUp 0.8s forwards 0.5s; }
+.filiere-card:nth-child(3) { animation: fadeInUp 0.8s forwards 0.7s; }
+.filiere-card:nth-child(4) { animation: fadeInUp 0.8s forwards 0.9s; }
+
+/* Modalités Cards animations */
+.modalite-card {
+transform: translateY(50px);
+opacity: 0;
+}
+
+.modalite-card:nth-child(1) { animation: fadeInUp 0.8s forwards 0.3s; }
+.modalite-card:nth-child(2) { animation: fadeInUp 0.8s forwards 0.5s; }
+.modalite-card:nth-child(3) { animation: fadeInUp 0.8s forwards 0.7s; }
+
+/* Hero image zoom effect */
+.hero-image {
+animation: zoomEffect 20s infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(50px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes zoomEffect {
+0% {
+transform: scale(1);
+}
+100% {
+transform: scale(1.1);
+}
+}

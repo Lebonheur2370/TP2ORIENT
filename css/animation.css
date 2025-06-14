@@ -24,15 +24,15 @@
   animation-delay: 0s;
 }
 .slide-2 {
-  background-image: url('../public/images/assets/uob.jpg');
+  background-image: url('../public/images/assets/afram.jpg');
   animation-delay: 4s;
 }
 .slide-3 {
-  background-image: url('../public/images/assets/ustm.jpg');
+  background-image: url('../public/images/assets/ung.jpg');
   animation-delay: 8s;
 }
 .slide-4 {
-  background-image: url('../public/images/assets/ung.jpg');
+  background-image: url('../public/images/assets/BBS.jpg');
   animation-delay: 12s;
 }
 
